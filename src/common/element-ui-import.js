@@ -7,28 +7,46 @@ import
 {
   Button,
   Select,
+  Option,
   Dropdown,
   DropdownMenu,
   DropdownItem,
   Input,
+  InputNumber,
   Loading,
   Tree,
+  Popover,
   Rate,
   Row,
-  Col
+  Col,
+  Form,
+  FormItem,
+  Table,
+  TableColumn,
+  MessageBox,
+  Message
 } from 'element-ui'
 let variable = {
   Button,
   Select,
+  Option,
   Dropdown,
   DropdownMenu,
   DropdownItem,
   Input,
+  InputNumber,
   Loading,
   Tree,
+  Popover,
   Rate,
   Row,
-  Col
+  Col,
+  Form,
+  FormItem,
+  Table,
+  TableColumn,
+  MessageBox,
+  Message
 }
 for (let item in variable) {
   if (variable.hasOwnProperty(item)) {

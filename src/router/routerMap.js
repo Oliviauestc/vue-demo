@@ -1,14 +1,16 @@
-/**
- * @author monkeywang
- * Date: 17/9/11
+/*
+ * @Author: wqy
+ * @Date: 2019-04-09 09:24:31
+ * @Last Modified by: wqy
+ * @Last Modified time: 2019-04-15 10:33:50
  */
 export default {
   '/': {
     path: 'components/canvas',
     name: 'canvas'
   },
-  '/about': {
-    path: 'components/about',
+  '/commonMap': {
+    path: 'components/commonMap',
     name: 'About'
   },
   '/circle': {
@@ -34,5 +36,9 @@ export default {
   '/download': {
     path: 'components/download',
     name: 'download'
+  },
+  '/test': {
+    path: 'components/test',
+    name: 'test'
   }
 }

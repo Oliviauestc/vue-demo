@@ -99,7 +99,6 @@
         var color = ['#a6c84c', '#ffa022', '#46bee9']
         var i = 0
         for (let item in this.lineData) {
-          console.log(item, i)
           this.networks.push(item)
           series.push({
             name: item,

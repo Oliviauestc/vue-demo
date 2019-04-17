@@ -2,7 +2,7 @@
   <div class="douban-header">
     <div class="douban-bar">
       <ul>
-        <li v-for="bar in barList" @click="choiceUrl(bar.title)">
+        <li v-for="bar in barList" @click="choiceUrl(bar.title)" :key="bar.title">
           <router-link :to="bar.url" :class="title===bar.title? 'active':''">{{bar.title}}</router-link>
         </li>
       </ul>
@@ -15,7 +15,7 @@
     data () {
       return {
         content: '',
-        title: '正在热映',
+        title: '折线图',
         barList: [{
           title: '折线图',
           url: '/'
@@ -26,16 +26,25 @@
           title: '拖拽拓扑',
           url: '/bars'
         }, {
-          title: 'echart地图',
-          url: '/about'
+          title: '地图拓扑',
+          url: '/commonMap'
         }, {
           title: '下钻地图',
           url: '/downMap'
         }, {
           title: '上传下载',
           url: '/download'
+        }, {
+          title: 'test',
+          url: '/test'
         }]
       }
+    },
+    created () {
+      const found = this.barList.find(element => {
+        return element.url === window.location.pathname
+      })
+      this.title = found.title
     },
     methods: {
       choiceUrl (title) {
@@ -57,7 +66,6 @@
     width: 100%;
     height: 50px;
     .douban-bar{
-
       width: 950px;
       margin: 0 auto;
       height: 20px;
