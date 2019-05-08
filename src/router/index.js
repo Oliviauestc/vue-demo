@@ -21,7 +21,8 @@ for (let key in routerMap) {
 /**
  * 路由信息配置
  */
-export default new Router({
+const router = new Router({
   mode: 'history',
   routes: routers
 })
+export default router

@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <Dheader></Dheader>
     <transition name="fade">
       <keep-alive exclude="moviesDetail">
         <router-view></router-view>
@@ -14,11 +13,6 @@ export default {
   data () {
     return {
       msg: 'hello vue'
-    }
-  },
-  components: {
-    'Dheader': (resolve) => {
-      require(['./header'], resolve)
     }
   }
 }

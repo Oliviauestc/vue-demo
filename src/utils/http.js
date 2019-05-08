@@ -7,6 +7,8 @@ const http = axios.create({
 })
 // 添加请求拦截器
 http.interceptors.request.use(config => {
+  console.log('config', config)
+  config.headers['Access-Token'] = localStorage.getItem('LG_TK')
   return config
 }, error => {
   return Promise.reject(error)
